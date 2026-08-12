@@ -9,16 +9,15 @@
   <meta property="og:site_name" content="拾光小筑" />
   <meta property="og:title" content="拾光小筑 - 记录生活，沉淀思考" />
   <meta property="og:description" content="阿星的个人博客：技术、读书、旅行与生活随笔。" />
-  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:url" content="https://baifeng.de5.net/" />
   <meta name="twitter:card" content="summary" />
-  <link rel="canonical" href="https://example.com/" />
+  <link rel="canonical" href="https://baifeng.de5.net/" />
   <link rel="alternate" type="application/rss+xml" title="拾光小筑 RSS" href="feed.xml" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://picsum.photos" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
   <script>
-    // 首屏前应用主题，避免闪白
     (function () {
       try {
         var t = localStorage.getItem("blog-theme");
@@ -30,43 +29,60 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳到主要内容</a>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a class="nav-logo" href="index.html">拾光<span>小筑</span></a>
-      <div class="nav-links">
-        <a href="index.html" class="active">文章</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="header-logo" href="index.html">拾光<span>小筑</span></a>
+      <nav class="header-nav">
+        <a href="index.html" class="active">首页</a>
         <a href="archive.html">归档</a>
         <a href="about.html">关于</a>
+      </nav>
+      <div class="header-search">
+        <input type="search" id="search-input" placeholder="搜索文章…" autocomplete="off" />
+        <button id="search-btn">搜索</button>
         <button class="theme-toggle" aria-label="切换主题">🌙</button>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <main class="container" id="main-content">
-    <section class="hero">
-      <div class="hero-avatar">🌿</div>
+  <main id="main-content">
+    <!-- Hero -->
+    <section class="hero container">
       <h1>拾光小筑</h1>
-      <p>记录生活，沉淀思考</p>
-      <div class="divider"></div>
+      <p>记录生活，沉淀思考。一个喜欢写代码也喜欢写文字的人。</p>
+      <div class="hero-cats" id="hero-cats"></div>
     </section>
 
-    <div class="search-box">
-      <input type="search" id="search-input" placeholder="搜索文章标题、内容或标签…" autocomplete="off" />
+    <!-- 最新文章 -->
+    <div class="container">
+      <div class="tag-row" id="tag-row"></div>
+      <section class="section">
+        <div class="section-head"><h2>最新文章</h2></div>
+        <div class="card-grid" id="latest-posts"></div>
+      </section>
+
+      <nav class="pagination" id="pagination"></nav>
     </div>
-    <div class="tag-filter" id="tag-filter"></div>
-    <section class="post-list" id="post-list"></section>
-    <nav class="pagination" id="pagination"></nav>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>© <span id="year"></span> 拾光小筑 · 用文字抵抗遗忘 · <a href="feed.xml">RSS</a><a href="#" id="footer-repo" hidden>GitHub</a></p>
+      <div class="footer-links">
+        <a href="index.html">首页</a>
+        <a href="archive.html">归档</a>
+        <a href="about.html">关于</a>
+        <a href="feed.xml">RSS</a>
+        <a href="#" id="footer-repo" hidden>GitHub</a>
+      </div>
+      <p>© <span id="year"></span> 拾光小筑 · 用文字抵抗遗忘</p>
     </div>
   </footer>
 
   <button class="back-top" aria-label="返回顶部">↑</button>
 
-  <script src="js/data.js" defer></script>
-  <script src="js/app.js" defer></script>
+  <script src="js/data.js?v=2" defer></script>
+  <script src="js/app.js?v=2" defer></script>
+  <script src="/pagefind/pagefind.js" defer></script>
 </body>
 </html>

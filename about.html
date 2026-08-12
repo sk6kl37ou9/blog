@@ -9,16 +9,15 @@
   <meta property="og:site_name" content="拾光小筑" />
   <meta property="og:title" content="关于 - 拾光小筑" />
   <meta property="og:description" content="关于拾光小筑与阿星：用文字抵抗遗忘，记录技术、读书、旅行与生活随笔。" />
-  <meta property="og:url" content="https://example.com/about.html" />
+  <meta property="og:url" content="https://baifeng.de5.net/about.html" />
   <meta name="twitter:card" content="summary" />
-  <link rel="canonical" href="https://example.com/about.html" />
+  <link rel="canonical" href="https://baifeng.de5.net/about.html" />
   <link rel="alternate" type="application/rss+xml" title="拾光小筑 RSS" href="feed.xml" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://picsum.photos" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
   <script>
-    // 首屏前应用主题，避免闪白
     (function () {
       try {
         var t = localStorage.getItem("blog-theme");
@@ -30,30 +29,59 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">跳到主要内容</a>
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a class="nav-logo" href="index.html">拾光<span>小筑</span></a>
-      <div class="nav-links">
-        <a href="index.html">文章</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="header-logo" href="index.html">拾光<span>小筑</span></a>
+      <nav class="header-nav">
+        <a href="index.html">首页</a>
+        <a href="archive.html">归档</a>
         <a href="about.html" class="active">关于</a>
         <button class="theme-toggle" aria-label="切换主题">🌙</button>
-      </div>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <main class="container about-page" id="main-content">
+  <main class="about-page" id="main-content">
     <div class="about-card" id="about-card"></div>
+    <div class="subscribe-box" id="subscribe-box">
+      <h3>📬 邮件订阅</h3>
+      <p>新文章发布时通知你，不打扰，可随时退订。</p>
+      <form class="subscribe-form" id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="输入你的邮箱" required autocomplete="email" />
+        <button type="submit">订阅</button>
+      </form>
+      <p class="subscribe-msg" id="subscribe-msg"></p>
+    </div>
+    <div class="contact-box" id="contact-box">
+      <h3>💬 留言给我</h3>
+      <p>有什么想说的？欢迎留言。</p>
+      <form class="contact-form" id="contact-form">
+        <input type="text" id="contact-name" placeholder="你的名字" required maxlength="30" />
+        <input type="email" id="contact-email" placeholder="你的邮箱" required autocomplete="email" />
+        <textarea id="contact-message" placeholder="想说的话…" rows="5" required minlength="10"></textarea>
+        <button type="submit">发送留言</button>
+      </form>
+      <p class="contact-msg" id="contact-msg"></p>
+    </div>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>© <span id="year"></span> 拾光小筑 · 用文字抵抗遗忘 · <a href="feed.xml">RSS</a><a href="#" id="footer-repo" hidden>GitHub</a></p>
+      <div class="footer-links">
+        <a href="index.html">首页</a>
+        <a href="archive.html">归档</a>
+        <a href="about.html">关于</a>
+        <a href="feed.xml">RSS</a>
+        <a href="#" id="footer-repo" hidden>GitHub</a>
+      </div>
+      <p>© <span id="year"></span> 拾光小筑 · 用文字抵抗遗忘</p>
     </div>
   </footer>
 
   <button class="back-top" aria-label="返回顶部">↑</button>
 
-  <script src="js/data.js" defer></script>
-  <script src="js/app.js" defer></script>
+  <script src="js/data.js?v=2" defer></script>
+  <script src="js/app.js?v=2" defer></script>
 </body>
 </html>

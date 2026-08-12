@@ -2,6 +2,17 @@
 # 构建脚本 scripts/build.js 会生成 dist/ 部署目录
 name = "shiguang-blog"
 pages_build_output_dir = "dist"
+compatibility_date = "2025-01-01"
+
+# --- KV 命名空间绑定 ---
+[[kv_namespaces]]
+binding = "BLOG_KV"
+id = "49d7bd648fe04acfbd6b476f78a7ca27"
+
+# --- 环境变量 ---
+[vars]
+# 联系表单通知邮箱（改成你的真实邮箱）
+CONTACT_EMAIL = "blog@xeo.dpdns.org"
 
 # 部署后访问：https://shiguang-blog.pages.dev
 # 绑定自定义域名在 Cloudflare Dashboard 的 Pages 项目中配置

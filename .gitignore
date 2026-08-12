@@ -10,3 +10,6 @@ Thumbs.db
 .idea/
 # InsCode 内部文件
 .inscode/
+
+# Cloudflare Wrangler 运行时状态
+.wrangler/

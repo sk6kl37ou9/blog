@@ -133,6 +133,46 @@ excerpt: 一句话摘要，会显示在首页卡片
 
 ---
 
+## 七、动态功能（Cloudflare Functions + KV）
+
+本博客新增了三大动态功能，依赖 Cloudflare Pages Functions 和 KV 存储。
+
+### 7.1 创建 KV 命名空间
+
+1. Dashboard → Workers & Pages → KV → **Create namespace**
+2. 命名 `BLOG_KV`，创建后复制 namespace ID（类似 `abc123...`）
+3. 打开项目根目录的 `wrangler.toml`，取消注释并填入 ID：
+
+```toml
+[[kv_namespaces]]
+binding = "BLOG_KV"
+id = "abc123456..."
+```
+
+4. 也同样在 Cloudflare Pages 项目 → **Settings → Functions → KV namespace bindings** 添加：
+   - Variable name: `BLOG_KV`
+   - KV namespace: 选择刚创建的 `BLOG_KV`
+
+### 7.2 配置联系表单通知邮箱
+
+在 Cloudflare Pages 项目 → **Settings → Environment variables** 添加：
+- Variable name: `CONTACT_EMAIL`
+- Value: 你的真实邮箱
+
+### 7.3 动态功能说明
+
+| 功能 | API | 存储 |
+|------|-----|------|
+| 文章点赞 | `POST/GET /api/like` | KV (like:xxx) |
+| 邮件订阅 | `POST /api/subscribe` | KV (sub:xxx) |
+| 联系表单 | `POST /api/contact` | MailChannels 免费发信 |
+| 全文搜索 | Pagefind 构建时索引 | `dist/pagefind/` |
+
+推送代码后，Cloudflare Pages 自动部署 Functions 和静态文件，无需额外操作。
+
+> MailChannels 每天免费 100 封，个人博客够用。注意 `CONTACT_EMAIL` 在 `wrangler.toml` 和 CF 环境变量中二选一配置即可。
+
+
 ## 目录结构说明
 
 ```
