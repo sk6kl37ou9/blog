@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>拾光小筑 - 记录生活，沉淀思考</title>
+  <meta name="description" content="阿星的个人博客：技术、读书、旅行与生活随笔。记录生活，沉淀思考。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="拾光小筑" />
+  <meta property="og:title" content="拾光小筑 - 记录生活，沉淀思考" />
+  <meta property="og:description" content="阿星的个人博客：技术、读书、旅行与生活随笔。" />
+  <meta property="og:url" content="https://example.com/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://example.com/" />
+  <link rel="alternate" type="application/rss+xml" title="拾光小筑 RSS" href="feed.xml" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%BF%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://picsum.photos" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // 首屏前应用主题，避免闪白
+    (function () {
+      try {
+        var t = localStorage.getItem("blog-theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="index.html">拾光<span>小筑</span></a>
+      <div class="nav-links">
+        <a href="index.html" class="active">文章</a>
+        <a href="archive.html">归档</a>
+        <a href="about.html">关于</a>
+        <button class="theme-toggle" aria-label="切换主题">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" id="main-content">
+    <section class="hero">
+      <div class="hero-avatar">🌿</div>
+      <h1>拾光小筑</h1>
+      <p>记录生活，沉淀思考</p>
+      <div class="divider"></div>
+    </section>
+
+    <div class="search-box">
+      <input type="search" id="search-input" placeholder="搜索文章标题、内容或标签…" autocomplete="off" />
+    </div>
+    <div class="tag-filter" id="tag-filter"></div>
+    <section class="post-list" id="post-list"></section>
+    <nav class="pagination" id="pagination"></nav>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> 拾光小筑 · 用文字抵抗遗忘 · <a href="feed.xml">RSS</a><a href="#" id="footer-repo" hidden>GitHub</a></p>
+    </div>
+  </footer>
+
+  <button class="back-top" aria-label="返回顶部">↑</button>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

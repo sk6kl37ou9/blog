@@ -1,0 +1,11 @@
+# Cloudflare Pages 重定向规则
+# 匹配 404，显示自定义 404 页
+/404.html 404
+
+# 文章友好 URL（可选，启用后 post?id=xxx 也保留）
+# 根路径
+/ /index.html 200
+
+# 旧路径兜底：无后缀的页面
+/about /about.html 200
+/archive /archive.html 200

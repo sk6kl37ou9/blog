@@ -1,0 +1,26 @@
+# Cloudflare Pages 响应头
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# 长期缓存构建产物（带 hash 的文件）
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML 页面短缓存
+/index.html
+/about.html
+/archive.html
+/post.html
+/404.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 静态 XML / 文本
+/feed.xml
+/sitemap.xml
+/robots.txt
+  Cache-Control: public, max-age=3600

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>拾光小筑</title>
+    <link>https://baifeng.de5.net/</link>
+    <description>记录生活，沉淀思考</description>
+    <language>zh-CN</language>
+    <atom:link href="https://baifeng.de5.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>博客 Markdown 引擎升级：图片、表格、列表都支持了</title>
+      <link>https://baifeng.de5.net/post.html?id=markdown-upgrade-demo</link>
+      <guid isPermaLink="false">https://baifeng.de5.net/post.html?id=markdown-upgrade-demo</guid>
+      <pubDate>Tue, 11 Aug 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[这篇用来演示新的渲染能力：图片、表格、三级标题、有序列表、删除线、分隔线。]]></description>
+    </item>
+    <item>
+      <title>慢一点，比较快</title>
+      <link>https://baifeng.de5.net/post.html?id=slow-living-2026</link>
+      <guid isPermaLink="false">https://baifeng.de5.net/post.html?id=slow-living-2026</guid>
+      <pubDate>Sun, 09 Aug 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[我们总在追赶什么，却忘了问自己要去哪里。这篇聊聊我最近的「慢生活」实验。]]></description>
+    </item>
+    <item>
+      <title>我如何理解 JavaScript 闭包</title>
+      <link>https://baifeng.de5.net/post.html?id=js-closure-notes</link>
+      <guid isPermaLink="false">https://baifeng.de5.net/post.html?id=js-closure-notes</guid>
+      <pubDate>Mon, 27 Jul 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[闭包不是黑魔法，它只是函数和它周围状态的组合。用三个例子讲清楚。]]></description>
+    </item>
+    <item>
+      <title>广州 City Walk：从沙面走到东山口</title>
+      <link>https://baifeng.de5.net/post.html?id=city-walk-guangzhou</link>
+      <guid isPermaLink="false">https://baifeng.de5.net/post.html?id=city-walk-guangzhou</guid>
+      <pubDate>Tue, 14 Jul 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[一条适合周末慢慢走的路线，老建筑、咖啡店和树荫一样都不缺。]]></description>
+    </item>
+    <item>
+      <title>2026 上半年读过的书</title>
+      <link>https://baifeng.de5.net/post.html?id=reading-list-2026-h1</link>
+      <guid isPermaLink="false">https://baifeng.de5.net/post.html?id=reading-list-2026-h1</guid>
+      <pubDate>Mon, 29 Jun 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[半年读了十一本，挑出五本真正值得推荐的，附一句话点评。]]></description>
+    </item>
+    <item>
+      <title>你好，这是我的博客</title>
+      <link>https://baifeng.de5.net/post.html?id=hello-blog</link>
+      <guid isPermaLink="false">https://baifeng.de5.net/post.html?id=hello-blog</guid>
+      <pubDate>Sun, 31 May 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[第一篇。写写为什么要在 2026 年还坚持拥有一个自己的博客。]]></description>
+    </item>
+  </channel>
+</rss>

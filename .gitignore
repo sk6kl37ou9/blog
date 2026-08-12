@@ -1,0 +1,12 @@
+# 构建产物（由 scripts/build.js 生成）
+dist/
+node_modules/
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+# InsCode 内部文件
+.inscode/

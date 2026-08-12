@@ -1,0 +1,7 @@
+# Cloudflare Pages 构建配置（由 wrangler pages deploy 使用）
+# 构建脚本 scripts/build.js 会生成 dist/ 部署目录
+name = "shiguang-blog"
+pages_build_output_dir = "dist"
+
+# 部署后访问：https://shiguang-blog.pages.dev
+# 绑定自定义域名在 Cloudflare Dashboard 的 Pages 项目中配置
